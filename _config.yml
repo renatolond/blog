@@ -16,7 +16,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Just an aggregator for all my crazy stuff.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lond.com.br" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: renatolond
 github_username:  renatolond
 author_gravatar: b122dee4fc871a0a06a4bcc4f521b62d
 timezone:           Europe/Brussels # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
