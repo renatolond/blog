@@ -8,6 +8,10 @@ permalink: /about/
 
 Software developer, vim user, cyclist, powered by coffee.
 
+<i class="fa fa-envelope-o" aria-hidden="true"></i> {% email cmVuYXRvQGxvbmQuY29tLmJy %}
+
+<i class="fa fa-map-marker" aria-hidden="true"></i> Brussels, Belgium
+
 ### Find me in other places
 
 <i class="fa fa-mastodon" aria-hidden="true"></i> Mastodon: [@renatolond@masto.donte.com.br](https://masto.donte.com.br/@renatolond){:target="_blank"}
@@ -21,5 +25,7 @@ Software developer, vim user, cyclist, powered by coffee.
 ### Some of my projects
 
 [Mastodon-Twitter Crossposter](https://github.com/renatolond/mastodon-twitter-poster){:target="_blank"}
+
+Sysadmin and Sysop of [Mastodon(te)](https://masto.donte.com.br)
 
 [Internet Video Games Library](https://github.com/internetvideogamelibrary/internetvideogamelibrary-website){:target="_blank"}
