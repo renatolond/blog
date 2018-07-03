@@ -1,0 +1,38 @@
+---
+---
+
+@import "main";
+
+ul, ol {
+  margin: 0px;
+}
+
+article > ul, ol {
+  margin: 10px 0;
+  padding-left: 50px;
+  li {
+    word-wrap: break-word;
+  }
+  img {
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+}
+
+h4 {
+  margin: 30px 0 0 0;
+}
+
+article figcaption {
+  text-align: center;
+}
+
+article hr {
+border: 0;
+height: 1px;
+background: #333;
+background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
