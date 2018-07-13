@@ -14,7 +14,8 @@ article > ul, ol {
     word-wrap: break-word;
   }
   img {
-    margin: 10px 0;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 5px;
   }
 }
@@ -35,4 +36,15 @@ background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
 background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
 background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
 background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+
+article {
+  max-width: 740px;
+}
+
+img {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
