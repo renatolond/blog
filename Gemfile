@@ -16,6 +16,7 @@ gem 'the-plain'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
+  gem 'jekyll-compose' # add some useful commands to create new posts
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
