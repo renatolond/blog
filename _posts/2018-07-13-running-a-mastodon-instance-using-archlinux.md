@@ -49,7 +49,7 @@ You need:
 
 What is assumed:
 - There's no service running in the same ports as Mastodon. If that's the case, adjustments will need to be made throughout the guide.
-- You're not using root as your base user. That you have another user configured with sudo access.
+- You're not using root as your base user. You do have a user configured with sudo access.
 
 ---
 
@@ -74,7 +74,7 @@ If you have 1GB it's quite likely that asset compilation will fail. Remember to 
 
 ### DNS
 
-The domain you're planning to use should have DNS records pointing to your server. If your server has a IPv6 address, you should configure an AAAA record, otherwise, only the A record should be enough.
+The domain you're planning to use should have DNS records pointing to your server. If your server has a IPv6 address, you should also configure an AAAA record, otherwise, only the A record should be enough.
 
 Now, this guide will not get into [serving a different domain](https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Serving_a_different_domain.md){:target="_blank"}. Just have in mind that:
 - The domain will be part of the identifier of your instance users. Once it's defined, you cannot change it anymore or you'll get all kinds of federation weirdness.
@@ -310,7 +310,7 @@ And that means `nginx` was correctly started and that `ufw` is allowing connecti
 
 ### Intermission: Configuring Let's Encrypt
 
-Now, for Let's Encrypt we will use certbot that we installed previously. For more information about it you can take a look at [Arch Linux's wiki about Certbot](https://wiki.archlinux.org/index.php/Certbot){:target="_blank"}. For this guide, you need to run the following command:
+Now, for Let's Encrypt we will use `certbot`, that we installed previously. For more information about it you can take a look at [Arch Linux's wiki about Certbot](https://wiki.archlinux.org/index.php/Certbot){:target="_blank"}. For this guide, you need to run the following command:
 
 ```
 sudo certbot --nginx certonly -d my.instance.com
@@ -622,7 +622,7 @@ Which means the asset compilation failed and you will need to try again with mor
 
 ### Intermission: Mastodon directory permissions
 
-The mastodon user folder cannot be accessed by nginx. The `/home/mastodon/live/public` needs to be accessed by nginx because it's where images and css is served from.
+The mastodon user folder cannot be accessed by nginx. The `/home/mastodon/live/public` needs to be accessed by nginx because it's where images and css are served from.
 
 You have some options, the one I chose for this guide is:
 
@@ -742,7 +742,7 @@ After creating an UptimeRobot account, you can create a HTTP(s) type monitor poi
 
 If you have IPv6, you should also create another monitor with the Ping type, in which you should use your server's IPv6 as the IP.
 
-Now, in the settings page, you can click on "add public status page", then you select for selected monitors and you select the ones you just created. You can create a CNAME DNS, so that for instance `status.my.instance.com` would show the this new status page.
+Now, in the settings page, you can click on "add public status page", then you select "for selected monitors" and select the ones you just created. You can create a CNAME DNS entry, so that for instance `status.my.instance.com` would show the this new status page. There's more instructions in Uptime Robot's page.
 
 Now if your instance goes down or your IPv6 stops working, you should get an email.
 
@@ -836,7 +836,7 @@ In this case, we will need to use rvm to install the new version. The command is
 rvm install 2.5.2 -C --with-jemalloc
 ```
 
-Everything will take some time and at the end you will be ready to follow through. Notice that this won't happen very often.
+Everything will take some time and at the end you will be ready to follow through. Notice that this won't happen very often. Also, after you make sure everything is running as expected, you can remove the old ruby version with `rvm remove <version>`. Wait for you to be sure that the new version is running, though!
 
 Now, you'll always want to make sure that you look at the releases notes for the release you're going to. Sometimes there's special tasks that need to be done before following.
 
