@@ -901,6 +901,8 @@ Now, second thing to take note: [Postgresql minor version](https://www.postgresq
 
 Since Mastodon v2.3.0, you can enable full text search for authorized statuses. That means toots you have written, boosted, favourited or were mentioned in. For this functionality, Mastodon uses Elasticsearch. As usual, you should take a look in [Arch Linux's wiki about Elasticsearch](https://wiki.archlinux.org/index.php/Elasticsearch){:target="_blank"}.
 
+Note: I was able to run elasticsearch on my test instance using the 1GB/1vCPU droplet from Digital Ocean with 1GB of Swap by using the memory configurations suggested at the [Arch Linux's wiki about Elasticsearch](https://wiki.archlinux.org/index.php/Elasticsearch#Configuration){:target="_blank"}, that is, `-Xms128m -Xmx512m`. However, I don't have any load and I don't know how the system would behave with more real loads.
+
 To install elasticsearch do:
 ```
 sudo pacman -S elasticsearch
