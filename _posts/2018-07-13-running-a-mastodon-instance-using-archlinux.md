@@ -50,6 +50,7 @@ You need:
 What is assumed:
 - There's no service running in the same ports as Mastodon. If that's the case, adjustments will need to be made throughout the guide.
 - You're not using root as your base user. You do have a user configured with sudo access.
+- You already configured [NTP](https://wiki.archlinux.org/index.php/Network_Time_Protocol_daemon){:target="_blank"} or something similar. Some operations, like 2-Factor Authentication need the correct time on your server.
 
 ---
 
