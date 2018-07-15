@@ -517,7 +517,9 @@ cd ~
 git clone https://github.com/tootsuite/mastodon.git live
 ```
 
-Now, it's highly recommended to run a stable release. That means the latest on [tootsuite's releases](https://github.com/tootsuite/mastodon/releases/){:target="_blank"}. At the time of writing the latest one is `v2.4.3`.
+Now, it's highly recommended to run a stable release. Why? Stable releases are bundles of finished features, if you're running an instance for day-to-day use, they are the most recommended for being the less likely to have breaking bugs.
+
+The stable release is the latest on [tootsuite's releases](https://github.com/tootsuite/mastodon/releases/){:target="_blank"} without any "rc". At the time of writing the latest one is `v2.4.3`.
 With that in mind, we will do:
 
 ```
