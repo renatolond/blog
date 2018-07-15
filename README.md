@@ -8,3 +8,10 @@ My personal blog. The resulting blog is hosted at https://lond.com.br
 Jekyll is needed for serving or building. Jekyll install instructions can be found in [Jekyll Installation](https://jekyllrb.com/docs/installation/)
 
 Using [The Plain](https://github.com/heiswayi/the-plain) theme, should be installed after using `bundle`.
+
+# Updating the blog:
+
+```
+jekyll build
+rsync -r --info=progress2 -v _site/ host:path
+```
