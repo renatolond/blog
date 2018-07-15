@@ -625,7 +625,7 @@ Which means the asset compilation failed and you will need to try again with mor
 
 ### Intermission: Mastodon directory permissions
 
-The mastodon user folder cannot be accessed by nginx. The `/home/mastodon/live/public` needs to be accessed by nginx because it's where images and css are served from.
+The mastodon user folder cannot be accessed by nginx. The path `/home/mastodon/live/public` needs to be accessed by nginx because it's where images and css are served from.
 
 You have some options, the one I chose for this guide is:
 
