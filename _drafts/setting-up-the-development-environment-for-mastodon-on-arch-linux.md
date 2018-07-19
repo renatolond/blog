@@ -177,11 +177,13 @@ bundle exec rails db:setup
 
 This will use the default development configuration to setup the database. Which means: no password, same user as your username, using a database named `mastodon_development` in localhost.
 
+In development mode the database is setup with an admin account for you to test with. The email address will be `admin@YOURDOMAIN` (e.g. admin@localhost:3000) and the password will be `mastodonadmin`.
+
 Now, you have two options.
 
 ### Run each service separately
 
-If you checked out the guide to run an instance, you probably noticed that mastodon has three parts: A web service, a sidekiq service to run background jobs and a streaming service. In development you need those three components too, plus the webpack development server, which will compile assets (javascript, css) as needed.
+If you checked out the guide to run an instance, you probably noticed that mastodon has three parts: A web service, a sidekiq service to run background jobs and a streaming service. In development you need those three components too, plus the webpack development server, which will compile assets (javascript, css) as needed. In production we don't need webpack running all the time because we compile the assets only once after we update Mastodon.
 
 To run those separately, you will need one window for each, since each of those holds your terminal while it's running.
 
@@ -209,9 +211,9 @@ And to run webpack:
 ./bin/webpack-dev-server --listen-host 0.0.0.0
 ```
 
-All of those start basically immediately, except for the webpack server, which compiles the assets before starting.
+All of those should start immediately, except for the webpack server, which compiles the assets before starting.
 
-If everything is working as expected, if you open your browser window at `http://localhost:3000` you should see Mastodon landing page!
+To check that everything is working as expected, if you open your browser window at `http://localhost:3000` you should see Mastodon landing page!
 
 ### Run everything using Foreman
 
@@ -229,17 +231,60 @@ foreman start -f Procfile.dev
 
 # Working on master
 
-When working on master, the steps are similar to when updating an instance, but they happen much more frequently since there is more people working on master at the same time.
+When working on master, the steps are similar to when updating an instance, but they happen much more frequently since master changes much more frequently.
 
-This means, every time you pull changes into your computer (for instance, when you do `git pull origin master`), you need to might need to:
+This means, every time you pull changes into your computer (for instance, when you do `git pull origin master`), you might need to:
 
 ```
 # Update any gems that were changed
-bundle
+bundle install
 # Update any node packages that were changed
 yarn install --pure-lockfile
 # Update the database to the latest version
 bin/rails db:migrate RAILS_ENV=development
+```
+
+Now, you don't need to run them all the time, you will notice if one of them is not working as it should. How?
+
+Bundler complains like this:
+
+```
+Could not find proper version of railties (5.2.0) in any of the sources
+Run `bundle install` to install missing gems.
+```
+
+The name of the gem and version will change, but this means that one of your dependencies is not up to date and you need to run `bundle install` again.
+
+If the database is missing a migration, rails will complain with:
+
+```
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+```
+
+This will appear on your console, but also on your browser.
+
+# Tests
+
+Tests in the mastodon project live in the `spec` folder. Tests also use migrations, so if the database was updated since you last ran tests, you will need to run something like this:
+
+```
+bin/rails db:migrate RAILS_ENV=test
+```
+
+But when you try to run tests with a database missing migrations, you'll get an error from Rails that will explain exactly that.
+
+To run all the tests, you need to do:
+
+```
+rspec
+```
+
+To run only one test, you can run it like so:
+
+```
+rspec spec/validators/status_length_validator_spec.rb
 ```
 
 # Troubleshooting
