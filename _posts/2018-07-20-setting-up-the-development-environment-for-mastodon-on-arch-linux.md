@@ -34,6 +34,8 @@ Since this is a development setup, I'm not mentioning any security concerns. \\
 ⚠️ Do not use this guide for running a production instance. ⚠️ \\
 Refer to [how to run a mastodon instance using Arch Linux](/2018/07/13/running-a-mastodon-instance-using-archlinux) instead.
 
+Questions are super welcome, you can contact me using any of the methods listed in the [about page](/about). Also if you notice that something doesn't seem right, don't hesitate to hit me up.
+
 As with the other guide, I tested the steps on this guide on a virtual machine and they should work if you copy-paste them. Things might not work well if your computer has less than 2GB of ram.
 
 ---
