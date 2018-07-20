@@ -16,19 +16,57 @@ tags:
 
 Well, on the last post I described [how to run a mastodon instance using Arch Linux](/2018/07/13/running-a-mastodon-instance-using-archlinux). But what if you wanted to contribute to Mastodon also?
 
-I still plan to write maybe a small demo on how to put hands on Mastodon codebase, maybe fixing a small bug, but before that we need to have the development environment up and working!
+I still plan to write maybe a small demo on how to get your hands dirty on Mastodon's codebase, maybe fixing a small bug, but before that we need to have the development environment up and working!
 
-Now, as it's the case with the guide on [how to run your instance](/2018/07/13/running-a-mastodon-instance-using-archlinux), this guide is very similar to the [official guide](https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Development-guide.md), and when in doubt, you should double check the official guide because it's more likely to be up-to-date. This guide is also very similar to how to run an instance. Just sayin'.
+Now, as it's the case with the guide on [how to run your instance](/2018/07/13/running-a-mastodon-instance-using-archlinux), this guide is very similar to the [official guide](https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Development-guide.md), and when in doubt, you should double check the official guide because it's more likely to be up-to-date. This guide is also very similar to how to run an instance, I mean, it's the same software, right?
 
-There is also an [official guide to setting up your environment using vagrant](https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Vagrant-guide.md) which might be easier if you have enough resources for a VM running side-by-side with your environment.
+There is also an [official guide to setting up your environment using vagrant](https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Vagrant-guide.md) which might be easier if you have enough resources for a VM running side-by-side with your environment and/or does not run Linux.
 
-## Note on the choices made in this guide
+This guide is focused on Mastodon, but most of the setup done here will work for other ruby on rails projects you might want to contribute to.
+
+---
+
+<h3>Note on the choices made in this guide</h3>
 
 The official guide recommends [rbenv](http://rbenv.org/){:target="_blank"}, but I'm more used to [rvm](https://rvm.io/){:target="_blank"}. `rbenv` is likely to be more lightweight. So if you don't have any preferences, you might want to stick to [rbenv and ruby-build](https://wiki.archlinux.org/index.php/Rbenv){:target="_blank"} when installing ruby.
 
-Since this is a development setup, I'm not mentioning any security concerns. Do not use this guide for running a production instance. Refer to [how to run a mastodon instance using Arch Linux](/2018/07/13/running-a-mastodon-instance-using-archlinux) instead.
+Since this is a development setup, I'm not mentioning any security concerns. \\
+⚠️ Do not use this guide for running a production instance. ⚠️ \\
+Refer to [how to run a mastodon instance using Arch Linux](/2018/07/13/running-a-mastodon-instance-using-archlinux) instead.
 
-## Dependencies
+As with the other guide, I tested the steps on this guide on a virtual machine and they should work if you copy-paste them. Things might not work well if your computer has less than 2GB of ram.
+
+---
+
+<nav markdown="1">
+  <h3 class="toc_title">On this page</h3>
+  1. test
+  {:toc}
+</nav>
+
+---
+
+### General Mastodon development tips
+
+From the official guide:
+
+> You can use a localhost->world tunneling service like [ngrok](https://ngrok.com/) if you want to test federation, **however** that should not be your primary mode of operation. If you want to have a permanently federating server, set up a proper instance on a VPS with a domain name, and simply keep it up to date with your own fork of the project while doing development on localhost.
+>
+> Ngrok and similar services give you a random domain on each start up. This is good enough to test how the code you're working on handles real-world situations. But as soon as your domain changes, for everybody else concerned you're a different instance than before.
+>
+> Generally, federation bits are tricky to work on for exactly this reason - it's hard to test. And when you are testing with a disposable instance you are polluting the databases of the real servers you're testing against, usually not a big deal but can be annoying. The way I have handled this so far was thus: I have used ngrok for one session, and recorded the exchanges from its web interface to create fixtures and test suites. From then on I've been working with those rather than live servers.
+>
+> I advise to study the existing code and the RFCs before trying to implement any federation-related changes. It's not *that* difficult, but I think "here be dragons" applies because it's easy to break.
+>
+> If your development environment is running remotely (e.g. on a VPS or virtual machine), setting the `REMOTE_DEV` environment variable will swap your instance from using "letter opener" (which launches a local browser) to "letter opener web" (which collects emails and displays them at /letter_opener ).
+
+When trying to fix a bug or implement a new feature, it is a good idea to branch off the `master` branch with a new branch and then submit your pull request using that branch.
+
+A good way to see that your environment is working as it should is to check out the latest stable release (for instance, at the time of writing the latest stable release is `v2.4.3`) and then run tests as suggested in the [tests](#tests) session. They should all pass because the tests in stable releases should always be working.
+
+---
+
+### Dependencies
 
 Since we're trying to run the same software as in the production guide, we'll need mostly the same dependencies, this is what we'll need:
 
@@ -47,6 +85,8 @@ Now, you can install those with:
 ```
 sudo pacman -S postgresql redis ffmpeg imagemagick protobuf git python2 base-devel
 ```
+
+---
 
 ### PostgreSQL configuration
 
@@ -81,7 +121,9 @@ CREATE USER <your username here> SUPERUSER;
 
 The `SUPERUSER` level will let you do anything without having to change users. With great powers...
 
-## Redis
+---
+
+### Redis
 
 We also need to start redis. Same as postgresql:
 
@@ -91,7 +133,9 @@ sudo systemctl start redis # will start redis
 
 As with postgres, you can `enable` it too to make it start with the system, but personally I prefer to start on demand.
 
-## Setting up ruby and node
+---
+
+### Setting up ruby and node
 
 This part is very similar to the production guide, so I'll copy and paste a bit:
 
@@ -152,13 +196,14 @@ gem install bundler
 
 And with that we have ruby and npm dependencies ready to go.
 
-## Cloning the repo and installing dependencies
+---
+
+### Cloning the repo and installing dependencies
 
 You need to clone the repo somewhere on your computer. I usually clone my projects in a `source` folder in my home directory, if you do different, change the following instructions accordingly.
 
 ```
 cd ~/source
-# Installing dependencies and running the services
 git clone https://github.com/tootsuite/mastodon.git
 ```
 
@@ -168,6 +213,8 @@ And then, `cd ~/source/mastodon` and we will install the dependencies of the pro
 bundle install # install ruby dependencies
 yarn install --pure-lockfile # install node dependencies
 ```
+
+This will also take a while, try to relax a bit, have you listened to your favorite song today? 🎶
 
 Since we created the postgres user before, we can setup the development database using:
 
@@ -181,7 +228,9 @@ In development mode the database is setup with an admin account for you to test 
 
 Now, you have two options.
 
-### Run each service separately
+---
+
+#### Run each service separately
 
 If you checked out the guide to run an instance, you probably noticed that mastodon has three parts: A web service, a sidekiq service to run background jobs and a streaming service. In development you need those three components too, plus the webpack development server, which will compile assets (javascript, css) as needed. In production we don't need webpack running all the time because we compile the assets only once after we update Mastodon.
 
@@ -215,7 +264,9 @@ All of those should start immediately, except for the webpack server, which comp
 
 To check that everything is working as expected, if you open your browser window at `http://localhost:3000` you should see Mastodon landing page!
 
-### Run everything using Foreman
+---
+
+#### Run everything using Foreman
 
 Now, most of the time this method is more practical. Running each service by itself is good if one is not starting to see what is the error, but most of the time you'll want to start everything so that you can start coding away. In which case, first you'll want to install foreman
 
@@ -229,7 +280,9 @@ And then, when you need to start your dev environment you can do:
 foreman start -f Procfile.dev
 ```
 
-# Working on master
+---
+
+### Working on master
 
 When working on master, the steps are similar to when updating an instance, but they happen much more frequently since master changes much more frequently.
 
@@ -265,7 +318,25 @@ ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this is
 
 This will appear on your console, but also on your browser.
 
-# Tests
+If the ruby being used in the project is updated, you will also see some complaints from rvm (in this example, with a hypothetical ruby 2.5.2):
+
+```
+$ cd .
+Required ruby-2.5.2 is not installed.
+To install do: 'rvm install "ruby-2.5.2"'
+```
+
+In that case we need to do the same as we did to install it the first time, that is:
+
+```
+rvm install 2.5.2
+```
+
+And since rvm manages gems by ruby version, you'll need to install the dependencies again using `bundle install`.
+
+---
+
+### Tests
 
 Tests in the mastodon project live in the `spec` folder. Tests also use migrations, so if the database was updated since you last ran tests, you will need to run something like this:
 
@@ -287,9 +358,35 @@ To run only one test, you can run it like so:
 rspec spec/validators/status_length_validator_spec.rb
 ```
 
-# Troubleshooting
+---
 
-* Mastodon has no css
+### Other useful commands
+
+If you add a new string that needs to be translated, you can run
+
+```
+yarn manage:translations
+```
+
+To update the localization files. This is needed so that [weblate](https://weblate.joinmastodon.org) can inform translators that there are new strings to be translated in other languages.
+
+You can check code quality using
+
+```
+rubocop
+```
+
+Have in mind that it might complain about code violations that you did not introduce, but you should always try not to introduce new violations.
+
+---
+
+### Troubleshooting
+
+#### RVM says it's not a function
+
+Follow recommended instructions at [https://rvm.io/integration/gnome-terminal](https://rvm.io/integration/gnome-terminal)
+
+#### Mastodon has no css
 If mastodon has no css and you see something like `#<Errno::ECONNREFUSED: Failed to open TCP connection to localhost:3035 (Connection refused - connect(2) for "::1" port 3035)>` in your console, the issue is where webpacker is trying to connect. You can fix it by changing `config/webpacker.yml`.
 Instead of
 
