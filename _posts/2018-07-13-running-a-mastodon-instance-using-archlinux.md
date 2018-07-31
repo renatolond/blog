@@ -894,6 +894,22 @@ bundle pristine
 
 This will take a little while but will recompile needed gems. When in doubt, do that after a system upgrade.
 
+I had issues in the past with gems that Mastodon uses which have native extensions and are being installed straight from git, namely `posix-spawn` and `http_parser.rb`. They were not reinstalled with `bundle pristine` and I had to manually rebuild them. To do that, find where they are installed doing:
+
+```
+bundle show posix-spawn
+```
+
+With the output of that (which will be something like `/home/mastodon/.rvm/gems/ruby-2.5.1/bundler/gems/posix-spawn-58465d2e2139`, do:
+
+```
+rm -rf /home/mastodon/.rvm/gems/ruby-2.5.1/bundler/gems/posix-spawn-58465d2e2139 /home/mastodon/.rvm/gems/ruby-2.5.1/bundler/gems/extensions/x86_64-linux/2.5.0/posix-spawn-58465d2e2139
+```
+
+This is just an example and you will have to replace this with the output of your bundle show command, and then find the equivalent path in the `gems/extensions` folder. Do it for both `posix-spawn` and `http_parser.rb` (and any other gem that comes from git if it gives you trouble).
+
+And after that you can do `bundle install --without development test` to install them again.
+
 Now, second thing to take note: [Postgresql minor version](https://www.postgresql.org/support/versioning/){:target="_blank"} are compatible between themselves. This means that 9.6.8 is compatible with 9.6.9 and after version 10 they adopted a two number versioning, which means that 10.3 is compatible with 10.4. However, 9.6 is not compatible with 10. And 10 will not be compatible with 11. This means that: when upgrading from 10 to 11 you need to follow the [official documentation](https://www.postgresql.org/docs/current/static/upgrading.html){:target="_blank"} and [Arch Linux's wiki orientation](https://wiki.archlinux.org/index.php/PostgreSQL#Upgrading_PostgreSQL){:target="_blank"}. With that in mind, be careful when upgrading.
 
 🛑 Upgrading wrongly may cause data loss. 🛑
