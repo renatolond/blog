@@ -33,6 +33,13 @@ tags:
   - Vuze
   - XBMC
 ---
+
+_**Atualização em 2018**_: desde que eu escrevi esse post, melhores opções apareceram pra automatizar essa tarefa. Dentre elas eu recomendo dar uma olhada no [SickRage](https://sickrage.github.io/) e no [CouchPotato](https://couchpota.to/). Eles substituem o flexget com muito mais funções (como por exemplo, fazer o download de legendas).
+
+Por isso, esse post está basicamente desatualizado e está aqui só pra fins históricos. :)
+
+---
+
 No <a title="Raspberry Pi: O Media Center de US$35" href="/2012/11/16/raspberry-pi-o-media-center-de-us35/">último post</a> eu comentei um pouco sobre o raspberry e sobre o XBMC, mas a outra coisa que precisa é botar os filmes e séries dentro dele, e ficar passando manualmente quebra um pouco o propósito de ter o negócio todo contido numa caixa só.
 
 Como ele roda Linux, tem duas opções principais: Transmission e rTorrent.
