@@ -14,10 +14,12 @@
 title: Lond's Stuff
 description: >- # this means to ignore newlines until "baseurl:"
   Just an aggregator for all my crazy stuff.
-baseurl: "" # the subpath of your site, e.g. /blog
+author_name: "Renato \"Lond\" Cerqueira"
+logo_url: /assets/avatar.png
+
 url: "https://lond.com.br" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 github_username:  renatolond
-author_gravatar: b122dee4fc871a0a06a4bcc4f521b62d
 timezone:           Europe/Brussels # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Build settings

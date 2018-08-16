@@ -1,5 +1,10 @@
 source "https://rubygems.org"
 
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
+
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
@@ -11,7 +16,7 @@ source "https://rubygems.org"
 gem "jekyll", "~> 3.7.3"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem 'the-plain'
+gem 'the-plain', :github => 'heiswayi/the-plain', tag: 'v4.0.0'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
