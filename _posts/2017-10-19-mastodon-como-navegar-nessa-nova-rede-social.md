@@ -16,7 +16,9 @@ tags:
 ---
 <figure><img alt="" src="/assets/2017-10-19-mastodon-main.png" /><figcaption>Sobre toots, servidores e emojis customizados</figcaption></figure>
 
-Talvez você tenha ouvido falar do Mastodon, há alguns meses atrás a rede social bombou na mídia internacional como a rede que veio pra sacudir o Twitter. Mas talvez não, porque aparentemente a cobertura na mídia nacional foi bem pequena. Ainda assim, a rede acaba de chegar na versão 2.0 e está alcançando 1 milhão de usuários, além de mais de 1000 servidores ativos.
+_(atualizado pela última vez em 8 de agosto de 2018)_
+
+Talvez você tenha ouvido falar do Mastodon, há alguns meses atrás a rede social bombou na mídia internacional como a rede que veio pra sacudir o Twitter. Mas talvez não, porque aparentemente a cobertura na mídia nacional foi bem pequena. Ainda assim, a rede está chegando na versão 2.5 e está chegando aos 1.5 milhão de usuários, além de mais de 2400 servidores ativos.
 
 O Mastodon é uma rede social de *microblogging*, semelhante ao Twitter. A sua proposta é ser local onde os seus usuários podem postar status de até 500 caracteres. Até aí, tudo bem igual ao Twitter.
 
@@ -52,15 +54,26 @@ O que você vê na timeline local vai variar bastante de servidor pra servidor. 
 
 E no final das contas, todo mundo com conhecimento técnico ou um pouco de dinheiro pode botar um servidor novo no ar. Então se você quer fazer um servidor pra fãs do campeonato brasileiro, você também pode. (Tô jogando no ar. Acho que ainda não tem, hein. Corre lá :)
 
+#### Ah, mas é tipo reddit então?
+
+Não muito, o reddit tem vários fóruns, mas todos são desconectados. No Mastodon você pode seguir gente de todos os servidores, a diferença é só que gente que está no mesmo servidor que você é mais fácil de acompanhar.
+Alguns servidores até são temáticos (pra agregar gente falando de desenvolvimento de jogos ou de tecnologia), mas não é necessariamente o caso em todos os servidores. Na maioria das vezzes o tema do servidor vai ajudar só a juntar gente que pensa do mesmo jeito, mas muitas vezes o servidor existe porque tem um nome de domínio maneiro.
+
 #### Tá, e como eu escolho meu servidor, então?
 
 Tem um site que tem um pequeno questionário pra te ajudar justamente nessa questão, o [Mastodon Instances](https://instances.social/){:target="_blank"}.
 
+Uma coisa importante do servidor é que a administração e moderação é por servidor. Então o quão rígida ou não vai ser a moderação vai depender do servidor que você escolher. É importante dar uma lida nas regras do servidor pra não ser pego de surpresa ao violar uma delas!
+
 ---
 
-### Toots e tweets
+#### Toots e tweets
 
-Os toots são parecidos com tweets, mas tem algumas diferenças.
+No Twitter ou o seu perfil é fechado e aí ninguém vê seus tweets, ou ele é aberto e todo mundo vê seus tweets. No mastodon tem um controle mais fino disso. Você pode ter uma conta fechada e ainda postar toots pra todo, quando quiser.
+
+Além disso, no Mastodon tudo vem sempre em ordem cronológica, e nenhum like dos amiguinhos aparece no meio da sua timeline. Você escolhe o que você quer ver, e ninguém vê os posts que você curte, seus favoritos são sempre privados.
+
+Olha as diferenças entre os toots, no mastodon, e os tweets:
 
 * Os toots podem ter até 500 caracteres[⁽¹⁾](#500-chars);
 * Os toots têm configurações de privacidade:
@@ -71,17 +84,30 @@ Os toots são parecidos com tweets, mas tem algumas diferenças.
 * Spoiler / alerta de conteúdo: Isso é mara. Você pode marcar enquanto for postar um aviso de conteúdo pra um toot. Aí aparece assim:
   <figure><img alt="" src="/assets/2017-10-19-mastodon-spoiler.png" /><figcaption>Cuidado. Contém spoilers!</figcaption></figure>
 
-Ah, e é claro: Tudo em ordem cronológica. Nada de toot fora de ordem ou like dos amigos aparecendo na timeline.
 
 ---
 
 ### Emojis
 
-A versão 2.0 está fresquinha, saída do forno! E com ela vem uma novidade que eu acho particularmente bem legal: emojis customizados!
+Desde a versão 2.0 tem uma parada que eu acho particularmente bem legal: emojis customizados!
 
-<figure><img alt="" src="/assets/2017-10-19-mastodon-emoji.png" /><figcaption>Tá tendo <a href="http://cultofthepartyparrot.com/">party parrot</a> e várias bandeiras sim!</figcaption></figure>
+<figure><img alt="Uma imagem da caixa de edição do Mastodon, um menu de emojis está aberto mostrando a bandeira assexual, trans, bi, pan e outras, além de dois papagaios 'party parrots'" src="/assets/2017-10-19-mastodon-emoji.png" /><figcaption>Tá tendo <a href="http://cultofthepartyparrot.com/">party parrot</a> e várias bandeiras sim!</figcaption></figure>
 
 Além dos emojis normais que você acha no seu telefone, os administradores das instâncias podem adicionar outros emojis.
+
+---
+
+### Apagar & usar como rascunho
+
+Imagina que você acabou de fazer aquele toot maneiro e assim que ele foi postado, você notou um erro. Não dá pra editar toots, mas dá pra clicar em "apagar & usar como rascunho". Isso apaga o toot e manda ele de volta pra caixa de edição junto com as mídas que estavam nele pra você poder corrigir e postar outra vez.
+
+<figure><img alt="Uma imagem de um toot, com uma foto de um mastodonte segurando a bandeira brasileira e o texto diz 'Olha que bonito esse elefante!'" src="/assets/2017-10-19-mastodon-erro.png" /><figcaption>Epa. Isso não é um elefante.</figcaption></figure>
+<figure><img alt="A mesma imagem, mas com um menu de opções abertos onde a opção 'Apagar & usar como rascunho' está selecionada'" src="/assets/2017-10-19-mastodon-erro-2.png" /><figcaption>Vou corrigir!</figcaption></figure>
+<figure><img alt="A caixa de edição do Mastodon com o texto 'Olha que bonito esse elefante!' e a imagem do mastodonte segurando a bandeira brasileira" src="/assets/2017-10-19-mastodon-erro-3.png" /><figcaption>Ah, agora dá pra corrigir e botar mastodonte :)</figcaption></figure>
+
+Eu uso isso um monte pra adicionar descrição de texto nas imagens, por exemplo. É super prático!
+
+Isso existe em alguns clientes do Twitter também, mas no Mastodon tem direto pela interface padrão.
 
 ---
 
@@ -107,6 +133,17 @@ Mudar de rede social é um negócio complicado e é por isso que tem ferramentas
 
 [Mastodon Twitter Crossposter (postando entre as redes)](http://crossposter.masto.donte.com.br){:target="_blank"}: Essa aí é minha. Você conecta suas contas do Twitter e do Mastodon e aí você pode decidir como você quer postar entre as redes. Do Twitter pro Mastodon, ou do Mastodon pro Twitter, que tipo de posts vão ser postados. É open-source e tem coisa pra fazer, se quiser contribuir.
 
+
+### Segurança de dados
+
+Quando você se inscreve em um servidor do Mastodon (vamos dizer, no [masto.donte.com.br](https://masto.donte.com.br){:target="_blank"}), seus dados ficam registrados no masto.donte.com.br. O administrador do servidor pode ver suas mensagens, assim como o Gmail também pode ver suas mensagens. O Mastodon por padrão não permite que administradores vejam messagens marcadas como privadas, mas através de denúncias ou olhando o conteúdo do banco de dados, mesmo as mensagens privadas podem ser visualizadas.
+
+Quando alguém de outro servidor (digamos, do [mastodon.social](https://mastodon.social){:target="_blank"}) te segue ou se você enviar uma mensagem pra um usuário que esteja por lá, os seus posts são enviados também para esse outro servidor e uma cópia desses posts vai ser guardada lá.
+
+Isso quer dizer que administradores de servidores em que você tenha seguidores ou pra quem você envia mensagens podem espiar as mensagens. É exatamente o mesmo caso de servidores de email, se você enviar uma mensagem pra alguém no servidor do trabalho dessa pessoa, a empresa poderia ver as mensagens.
+
+<iframe src="https://masto.donte.com.br/@renatolond/100491543760118568/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400"></iframe><script src="https://masto.donte.com.br/embed.js" async="async"></script>
+
 ### Mais informações
 
 A página do projeto é um bom ponto pra começar: [The Mastodon Project](http://joinmastodon.org){:target="_blank"}. Tem tradução em português por lá. Aliás, falando em tradução: tanto a página do projeto quanto a interface do Mastodon em si foram traduzidas pro português Brasileiro pela [Anna](https://anna.flourishing.stream){:target="_blank"} 🎉
@@ -115,6 +152,8 @@ Tem muito mais informação, muito mais detalhada, no [repositório de documenta
 
 Um pouco mais velho mas igualmente útil é o texto da Qina Liu: [What I wish I knew before joining Mastodon](https://hackernoon.com/what-i-wish-i-knew-before-joining-mastodon-7a17e7f12a2b){:target="_blank"}. Embora esteja desatualizado em alguns pontos, ainda é bem divertido e foi o que me inspirou a escrever esse aqui :)
 
+Um outro também que explica bem vários pontos que eu tento explicar por aqui é o texto da Ginny McQueen: [Toot How-To : Intro to Mastodon](https://medium.com/@GinnyMcQueen/toot-how-to-intro-to-mastodon-e5655bfa87d2){:target="_blank"}.
+
 ---
 
-<a name='500-chars'></a>[1]: Vale notar que por padrão os toots têm 500 caracteres. Na prática alguns servidores permitem mais, no finado [witches.town](https://witches.town){:target="_blank"}, por exemplo, o limite era de 666 caracteres. 😜
+<a name='500-chars'></a>[1]: Vale notar que por padrão os toots têm 500 caracteres. Na prática alguns servidores permitem mais, no finado [witches.town](https://web.archive.org/web/20180417044653/https://witches.town/about){:target="_blank"}, por exemplo, o limite era de 666 caracteres. 😜
