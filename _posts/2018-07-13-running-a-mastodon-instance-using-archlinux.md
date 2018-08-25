@@ -493,7 +493,7 @@ And add these same lines to `~/.bash_profile`
 And then to install the node version we're using:
 
 ```
-nvm install 8.11.3
+nvm install 8.11.4
 ```
 
 And to install yarn:
@@ -519,14 +519,14 @@ git clone https://github.com/tootsuite/mastodon.git live
 
 Now, it's highly recommended to run a stable release. Why? Stable releases are bundles of finished features, if you're running an instance for day-to-day use, they are the most recommended for being the less likely to have breaking bugs.
 
-The stable release is the latest on [tootsuite's releases](https://github.com/tootsuite/mastodon/releases/){:target="_blank"} without any "rc". At the time of writing the latest one is `v2.4.3`.
+The stable release is the latest on [tootsuite's releases](https://github.com/tootsuite/mastodon/releases/){:target="_blank"} without any "rc". At the time of writing the latest one is `v2.4.5`.
 With that in mind, we will do:
 
 ```
 # Change directory to ~/live
 cd ~/live
 # Checkout to the latest stable branch
-git checkout v2.4.3
+git checkout v2.4.5
 ```
 
 And then, we will install the dependencies of the project:
@@ -679,7 +679,7 @@ User=mastodon
 WorkingDirectory=/home/mastodon/live
 Environment="RAILS_ENV=production"
 Environment="DB_POOL=5"
-ExecStart=/bin/bash -lc "bundle exec sidekiq -c 5 -q default -q mailers -q pull -q push"
+ExecStart=/bin/bash -lc "bundle exec sidekiq -c 5 -q default -q push -q mailers -q pull"
 TimeoutSec=15
 Restart=always
 
