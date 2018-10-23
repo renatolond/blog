@@ -91,7 +91,7 @@ Olha as diferenças entre os toots, no mastodon, e os tweets:
 
 Desde a versão 2.0 tem uma parada que eu acho particularmente bem legal: emojis customizados!
 
-<figure><img alt="Uma imagem da caixa de edição do Mastodon, um menu de emojis está aberto mostrando a bandeira assexual, trans, bi, pan e outras, além de dois papagaios 'party parrots'" src="/assets/2017-10-19-mastodon-emoji.png" /><figcaption>Tá tendo <a href="http://cultofthepartyparrot.com/">party parrot</a> e várias bandeiras sim!</figcaption></figure>
+<iframe src="https://masto.donte.com.br/@renatolond/100627452094203608/embed?autoplay=1" class="mastodon-embed" style="max-width: 100%; border: 0" width="400"></iframe><script src="https://masto.donte.com.br/embed.js" async="async"></script>
 
 Além dos emojis normais que você acha no seu telefone, os administradores das instâncias podem adicionar outros emojis.
 
@@ -141,8 +141,6 @@ Quando você se inscreve em um servidor do Mastodon (vamos dizer, no [masto.dont
 Quando alguém de outro servidor (digamos, do [mastodon.social](https://mastodon.social){:target="_blank"}) te segue ou se você enviar uma mensagem pra um usuário que esteja por lá, os seus posts são enviados também para esse outro servidor e uma cópia desses posts vai ser guardada lá.
 
 Isso quer dizer que administradores de servidores em que você tenha seguidores ou pra quem você envia mensagens podem espiar as mensagens. É exatamente o mesmo caso de servidores de email, se você enviar uma mensagem pra alguém no servidor do trabalho dessa pessoa, a empresa poderia ver as mensagens.
-
-<iframe src="https://masto.donte.com.br/@renatolond/100491543760118568/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400"></iframe><script src="https://masto.donte.com.br/embed.js" async="async"></script>
 
 ### Mais informações
 
