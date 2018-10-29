@@ -23,7 +23,7 @@ tags:
   - vetor
   - watch
 ---
-Just to make sure the next guy finds this easier than me, thanks to [printing an array in gdb](http://tuoq.blogspot.com/2008/06/printing-array-in-gdb.html "printing an array in gdb") I've been able to print one in idb, the intel debugger, as well. The syntax is the same as gdb.
+Just to make sure the next person finds this easier than me, thanks to [printing an array in gdb](http://tuoq.blogspot.com/2008/06/printing-array-in-gdb.html "printing an array in gdb") I've been able to print one in idb, the intel debugger, as well. The syntax is the same as gdb.
 ```
 * array @ size
 ```

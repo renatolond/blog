@@ -34,7 +34,7 @@ tags:
   - XBMC
 ---
 
-_**Atualização em 2018**_: desde que eu escrevi esse post, melhores opções apareceram pra automatizar essa tarefa. Dentre elas eu recomendo dar uma olhada no [SickRage](https://sickrage.github.io/) e no [CouchPotato](https://couchpota.to/). Eles substituem o flexget com muito mais funções (como por exemplo, fazer o download de legendas).
+_**Atualização em 2018**_: desde que eu escrevi esse post, melhores opções apareceram pra automatizar essa tarefa. Dentre elas eu recomendo dar uma olhada no [SickChill](http://sickchill.github.io) e no [CouchPotato](https://couchpota.to/). Eles substituem o flexget com muito mais funções (como por exemplo, fazer o download de legendas).
 
 Por isso, esse post está basicamente desatualizado e está aqui só pra fins históricos. :)
 
