@@ -18,9 +18,9 @@ Well, on the last post I described [how to run a mastodon instance using Arch Li
 
 I still plan to write maybe a small demo on how to get your hands dirty on Mastodon's codebase, maybe fixing a small bug, but before that we need to have the development environment up and working!
 
-Now, as it's the case with the guide on [how to run your instance](/2018/07/13/running-a-mastodon-instance-using-archlinux), this guide is very similar to the [official guide](https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Development-guide.md), and when in doubt, you should double check the official guide because it's more likely to be up-to-date. This guide is also very similar to how to run an instance, I mean, it's the same software, right?
+Now, as it's the case with the guide on [how to run your instance](/2018/07/13/running-a-mastodon-instance-using-archlinux), this guide is very similar to the {% external_link { "text":"official guide", "link": "https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Development-guide.md"} %}, and when in doubt, you should double check the official guide because it's more likely to be up-to-date. This guide is also very similar to how to run an instance, I mean, it's the same software, right?
 
-There is also an [official guide to setting up your environment using vagrant](https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Vagrant-guide.md) which might be easier if you have enough resources for a VM running side-by-side with your environment and/or does not run Linux.
+There is also an {% external_link {"text": "official guide to setting up your environment using vagrant", "link": "https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Vagrant-guide.md"} %} which might be easier if you have enough resources for a VM running side-by-side with your environment and/or does not run Linux.
 
 This guide is focused on Mastodon, but most of the setup done here will work for other ruby on rails projects you might want to contribute to.
 
@@ -28,7 +28,7 @@ This guide is focused on Mastodon, but most of the setup done here will work for
 
 <h3>Note on the choices made in this guide</h3>
 
-The official guide recommends [rbenv](http://rbenv.org/){:target="_blank"}, but I'm more used to [rvm](https://rvm.io/){:target="_blank"}. `rbenv` is likely to be more lightweight. So if you don't have any preferences, you might want to stick to [rbenv and ruby-build](https://wiki.archlinux.org/index.php/Rbenv){:target="_blank"} when installing ruby.
+The official guide recommends {% external_link {"text":"rbenv", "link":"http://rbenv.org/"} %}, but I'm more used to {% external_link {"text":"rvm", "link":"https://rvm.io/"} %}. `rbenv` is likely to be more lightweight. So if you don't have any preferences, you might want to stick to {% external_link {"text":"rbenv and ruby-build", "link":"https://wiki.archlinux.org/index.php/Rbenv"} %} when installing ruby.
 
 Since this is a development setup, I'm not mentioning any security concerns. \\
 ⚠️ Do not use this guide for running a production instance. ⚠️ \\
@@ -52,7 +52,7 @@ As with the other guide, I tested the steps on this guide on a virtual machine a
 
 From the official guide:
 
-> You can use a localhost->world tunneling service like [ngrok](https://ngrok.com/) if you want to test federation, **however** that should not be your primary mode of operation. If you want to have a permanently federating server, set up a proper instance on a VPS with a domain name, and simply keep it up to date with your own fork of the project while doing development on localhost.
+> You can use a localhost->world tunneling service like {% external_link {"text": "ngrok", "link": "https://ngrok.com/"} %} if you want to test federation, **however** that should not be your primary mode of operation. If you want to have a permanently federating server, set up a proper instance on a VPS with a domain name, and simply keep it up to date with your own fork of the project while doing development on localhost.
 >
 > Ngrok and similar services give you a random domain on each start up. This is good enough to test how the code you're working on handles real-world situations. But as soon as your domain changes, for everybody else concerned you're a different instance than before.
 >
@@ -92,7 +92,7 @@ sudo pacman -S postgresql redis ffmpeg imagemagick protobuf git python2 base-dev
 
 ### PostgreSQL configuration
 
-Take a look at [Arch Linux's wiki about PostgreSQL](https://wiki.archlinux.org/index.php/PostgreSQL){:target="_blank"}.
+Take a look at {% external_link {"text":"Arch Linux's wiki about PostgreSQL", "link":"https://wiki.archlinux.org/index.php/PostgreSQL"} %}.
 The first thing to do is to initialize the database cluster. This is done by doing:
 
 ```
@@ -141,7 +141,7 @@ As with postgres, you can `enable` it too to make it start with the system, but 
 
 This part is very similar to the production guide, so I'll copy and paste a bit:
 
-First step is that we install `rvm` that will be used for configuring ruby. For that we'll follow the instructions at [rvm.io](https://rvm.io/){:target="_blank"}. Before doing the following command, visit [rvm.io](https://rvm.io/){:target="_blank"} and check which keys need to be added with `gpg --keyserver hkp://keys.gnupg.net --recv-keys`.
+First step is that we install `rvm` that will be used for configuring ruby. For that we'll follow the instructions at {% external_link {"text":"rvm.io", "link":"https://rvm.io/"} %}. Before doing the following command, visit {% external_link {"text":"rvm.io", "link":"https://rvm.io/"} %} and check which keys need to be added with `gpg --keyserver hkp://keys.gnupg.net --recv-keys`.
 
 ```
 \curl -sSL https://get.rvm.io | bash -s stable
@@ -167,7 +167,7 @@ Similarly, we will install nvm for managing which node version we'll use.
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 ```
 
-Refer to [nvm github](https://github.com/creationix/nvm){:target="_blank"} for the latest version.
+Refer to {% external_link {"text":"nvm github", "link":"https://github.com/creationix/nvm"} %} for the latest version.
 
 You will also need to run
 ```
@@ -370,7 +370,7 @@ If you add a new string that needs to be translated, you can run
 yarn manage:translations
 ```
 
-To update the localization files. This is needed so that [weblate](https://weblate.joinmastodon.org) can inform translators that there are new strings to be translated in other languages.
+To update the localization files. This is needed so that {% external_link {"text": "weblate", "link": "https://weblate.joinmastodon.org" } %} can inform translators that there are new strings to be translated in other languages.
 
 You can check code quality using
 
@@ -386,7 +386,7 @@ Have in mind that it might complain about code violations that you did not intro
 
 #### RVM says it's not a function
 
-Follow recommended instructions at [https://rvm.io/integration/gnome-terminal](https://rvm.io/integration/gnome-terminal)
+Follow recommended instructions at {% external_link {"text": "https://rvm.io/integration/gnome-terminal", "link": "https://rvm.io/integration/gnome-terminal"} %}
 
 #### Mastodon has no css
 If mastodon has no css and you see something like `#<Errno::ECONNREFUSED: Failed to open TCP connection to localhost:3035 (Connection refused - connect(2) for "::1" port 3035)>` in your console, the issue is where webpacker is trying to connect. You can fix it by changing `config/webpacker.yml`.

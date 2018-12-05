@@ -21,6 +21,7 @@ url: "https://lond.com.br" # the base hostname & protocol for your site, e.g. ht
 baseurl: "" # the subpath of your site, e.g. /blog
 github_username:  renatolond
 timezone:           Europe/Brussels # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+lang: "en"
 
 # Build settings
 theme: the-plain

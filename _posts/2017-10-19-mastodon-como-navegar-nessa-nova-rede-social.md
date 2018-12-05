@@ -3,6 +3,7 @@ title: Mastodon&colon; como navegar nessa nova rede social
 date: 2017-10-19T20:31:48+00:00
 author: Lond
 layout: post
+lang: pt
 permalink: /2017/10/19/mastodon-como-navegar-nessa-nova-rede-social/
 tags:
   - Mastodon
@@ -16,9 +17,9 @@ tags:
 ---
 <figure><img alt="" src="/assets/2017-10-19-mastodon-main.png" /><figcaption>Sobre toots, servidores e emojis customizados</figcaption></figure>
 
-_(atualizado pela última vez em 8 de agosto de 2018)_
+_(atualizado pela última vez em 4 de dezembro de 2018)_
 
-Talvez você tenha ouvido falar do Mastodon, há alguns meses atrás a rede social bombou na mídia internacional como a rede que veio pra sacudir o Twitter. Mas talvez não, porque aparentemente a cobertura na mídia nacional foi bem pequena. Ainda assim, a rede está chegando na versão 2.5 e está chegando aos 1.5 milhão de usuários, além de mais de 2400 servidores ativos.
+Talvez você tenha ouvido falar do Mastodon, há alguns meses atrás a rede social bombou na mídia internacional como a rede que veio pra sacudir o Twitter. Mas talvez não, porque a cobertura na mídia nacional foi bem pequena. Ainda assim, a rede está chegando na versão 2.7 e está chegando aos 1.7 milhão de usuários, além de mais de 2400 servidores ativos.
 
 O Mastodon é uma rede social de *microblogging*, semelhante ao Twitter. A sua proposta é ser local onde os seus usuários podem postar status de até 500 caracteres. Até aí, tudo bem igual ao Twitter.
 
@@ -30,7 +31,7 @@ A diferença começa no modelo da rede, que é mais semelhante ao serviço de em
 
 <figure><img alt="" src="/assets/2017-10-19-mastodon-elephants.png" /><figcaption>Vamos pegar a imagem bonitinha do joinmastodon.org</figcaption></figure>
 
-O Mastodon é composto por vários servidores. Tem o [mastodon.social](https://mastodon.social){:target="_blank"}, que é mantido pelo líder do projeto, o [Eugen Rochko](https://mastodon.social/@gargron){:target="_blank"}. Ou mesmo o [Mastodon(te)](https://masto.donte.com.br){:target="_blank"}, mantido por mim mesmo. Os dois estão em lugares diferentes, controlados por pessoas diferentes, mas ainda assim, eles falam entre si. Se eu quero mandar uma mensagem pro Eugen, basta eu mandar uma mensagem pra `@gargron@mastodon.social` e ele vai receber ela por lá e se ele quiser me responder ele vai responder pra `@renatolond@masto.donte.com.br` e eu vou receber ela de cá. Ou seja, em vez de ser só uma arroba, você é uma arroba em um endereço, que nem email.
+O Mastodon é composto por vários servidores. Tem o {% external_link {"text":"mastodon.social", "link":"https://mastodon.social"} %}, que é mantido pelo líder do projeto, o {% external_link {"text":"Eugen Rochko", "link":"https://mastodon.social/@gargron"} %}. Ou mesmo o {% external_link {"text":"Mastodon(te)", "link":"https://masto.donte.com.br"} %}, mantido por mim mesmo. Os dois estão em lugares diferentes, controlados por pessoas diferentes, mas ainda assim, eles falam entre si. Se eu quero mandar uma mensagem pro Eugen, basta eu mandar uma mensagem pra `@gargron@mastodon.social` e ele vai receber ela por lá e se ele quiser me responder ele vai responder pra `@renatolond@masto.donte.com.br` e eu vou receber ela de cá. Ou seja, em vez de ser só uma arroba, você é uma arroba em um endereço, que nem email.
 
 Assim como no Twitter no início dos tempos, é possível acompanhar uma timeline especial, a timeline local, que tem todos os toots…
 
@@ -48,7 +49,7 @@ E aí, tem a timeline global (também chamada de federada) que é onde estão os
 
 #### Pô, mas aí só me complicou. Qual a vantagem?
 
-A vantagem é que cada servidor é administrado por gente diferente. Você com certeza pode achar um servidor onde você vai estar livre de conteúdo que você não quer ver e ver mais do que você quer. Tá querendo um servidor feito para brasileiros? [Tem lá](https://masto.donte.com.br){:target="_blank"}. Quer um servidor mais voltado pro público LGBTQ? [Tem lá](https://lgbt.io){:target="_blank"}. Ou de repente cê tá procurando um servidor mais voltado pro público interessado em livros e [também tem lá](https://bookwitty.social){:target="_blank"}. E se quiser derrubar o capitalismo e falar de gatinhos, [também tem um cantinho](https://anticapitalist.party){:target="_blank"}.
+A vantagem é que cada servidor é administrado por gente diferente. Você com certeza pode achar um servidor onde você vai estar livre de conteúdo que você não quer ver e ver mais do que você quer. Tá querendo um servidor feito para brasileiros? {% external_link {"text":"Tem lá", "link":"https://masto.donte.com.br"} %}. Quer um servidor mais voltado pro público LGBTQ? {% external_link {"text":"Tem lá", "link":"https://lgbt.io"} %}. Ou de repente cê tá procurando um servidor mais voltado pro público interessado em livros e {% external_link {"text":"também tem lá", "link":"https://booktoot.club"} %}. E se quiser derrubar o capitalismo e falar de gatinhos, {% external_link {"text":"também tem um cantinho", "link":"https://anticapitalist.party"} %}.
 
 O que você vê na timeline local vai variar bastante de servidor pra servidor. O que você vê na global vai variar porque servidores podem bloquear conteúdo de outros servidores. Então se você está num servidor que não permite nazismo, fascismo e afins, você provavelmente não vai ver conteúdo desse tipo na sua timeline (e se aparecer, você pode reportar aos administradores e eles provavelmente vão bloquear).
 
@@ -57,19 +58,23 @@ E no final das contas, todo mundo com conhecimento técnico ou um pouco de dinhe
 #### Ah, mas é tipo reddit então?
 
 Não muito, o reddit tem vários fóruns, mas todos são desconectados. No Mastodon você pode seguir gente de todos os servidores, a diferença é só que gente que está no mesmo servidor que você é mais fácil de acompanhar.
-Alguns servidores até são temáticos (pra agregar gente falando de desenvolvimento de jogos ou de tecnologia), mas não é necessariamente o caso em todos os servidores. Na maioria das vezzes o tema do servidor vai ajudar só a juntar gente que pensa do mesmo jeito, mas muitas vezes o servidor existe porque tem um nome de domínio maneiro.
+Alguns servidores até são temáticos (pra agregar gente falando de desenvolvimento de jogos ou de tecnologia), mas não é necessariamente o caso em todos os servidores. Na maioria das vezes o tema do servidor vai ajudar só a juntar gente que pensa do mesmo jeito, mas muitas vezes o servidor existe porque tem um nome de domínio maneiro.
 
 #### Tá, e como eu escolho meu servidor, então?
 
-Tem um site que tem um pequeno questionário pra te ajudar justamente nessa questão, o [Mastodon Instances](https://instances.social/){:target="_blank"}.
+Tem um site que tem um pequeno questionário pra te ajudar justamente nessa questão, o {% external_link {"text":"Mastodon Instances", "link":"https://instances.social/"} %}.
 
 Uma coisa importante do servidor é que a administração e moderação é por servidor. Então o quão rígida ou não vai ser a moderação vai depender do servidor que você escolher. É importante dar uma lida nas regras do servidor pra não ser pego de surpresa ao violar uma delas!
+
+Outra coisa importante é que por não ter uma grande empresa por trás de cada instância, é bom dar uma conferida em quanto tempo o servidor está no ar e se ele não costuma sair do ar com frequência, dá pra ter uma idéia usando o {% external_link {"text": "fediverse network", "link": "https://fediverse.network/masto.donte.com.br/"} %}, que mostra um gráfico de disponibilidade dos últimos 30 dias. O site também mostra quando a instância foi descoberta, mas o serviço começou a funcionar no fim de abril/2018, então tem instância que tá listada por volta dessa data mas já existia antes.
+
+Não se preocupe de escolher o melhor servidor logo de cara. Você pode exportar seus dados e ir pra um outro servidor se você não curtir alguma coisa do servidor em que você está.
 
 ---
 
 #### Toots e tweets
 
-No Twitter ou o seu perfil é fechado e aí ninguém vê seus tweets, ou ele é aberto e todo mundo vê seus tweets. No mastodon tem um controle mais fino disso. Você pode ter uma conta fechada e ainda postar toots pra todo, quando quiser.
+No Twitter ou o seu perfil é fechado e aí ninguém vê seus tweets, ou ele é aberto e todo mundo vê seus tweets. No mastodon tem um controle mais fino disso. Você pode ter uma conta fechada e ainda postar toots pra todo mundo ver, quando quiser.
 
 Além disso, no Mastodon tudo vem sempre em ordem cronológica, e nenhum like dos amiguinhos aparece no meio da sua timeline. Você escolhe o que você quer ver, e ninguém vê os posts que você curte, seus favoritos são sempre privados.
 
@@ -115,13 +120,13 @@ Isso existe em alguns clientes do Twitter também, mas no Mastodon tem direto pe
 
 Sim, tem aplicativos pra Android, pra IOS, pra desktop e até mesmo pra uns certos editores de texto 😉
 
-Por exemplo, pra Android os mais comuns são o [Tusky](https://tuskyapp.github.io/){:target="_blank"}, [Twidere](https://github.com/TwidereProject/Twidere-Android){:target="_blank"} (que funciona tanto pro Mastodon quanto pro Twitter), [Mastalab](https://github.com/stom79/mastalab){:target="_blank"}, [Subway Tooter](https://play.google.com/store/apps/details?id=jp.juggler.subwaytooter){:target="_blank"} e [11t](https://github.com/jeroensmeets/mastodon-app){:target="_blank"}.
+Por exemplo, pra Android os mais comuns são o {% external_link {"text":"Tusky", "link":"https://tuskyapp.github.io/"} %}, {% external_link {"text":"Twidere", "link":"https://github.com/TwidereProject/Twidere-Android"} %} (que funciona tanto pro Mastodon quanto pro Twitter), {% external_link {"text":"Mastalab", "link":"https://github.com/stom79/mastalab"} %}, {% external_link {"text":"Subway Tooter", "link":"https://play.google.com/store/apps/details?id=jp.juggler.subwaytooter"} %} e {% external_link {"text":"11t", "link":"https://github.com/jeroensmeets/mastodon-app"} %}.
 
-Pra iOS o [Amaroq](https://itunes.apple.com/us/app/amaroq-for-mastodon/id1214116200){:target="_blank"} e [iMast](https://itunes.apple.com/jp/app/imast/id1229461703){:target="_blank"}.
+Pra iOS o {% external_link { "text": "Toot!", "link": "https://itunes.apple.com/app/toot/id1229021451?ls=1&mt=8" } %}, {% external_link {"text":"Amaroq", "link":"https://itunes.apple.com/us/app/amaroq-for-mastodon/id1214116200"} %} e {% external_link {"text":"iMast", "link":"https://itunes.apple.com/jp/app/imast/id1229461703"} %}.
 
-Além disso, ambos Android e iOS recentemente suportam [PWAs](https://pt.wikipedia.org/wiki/Progressive_Web_App){:target="_blank"} e por isso você pode usar o próprio site da sua instância como um app no seu celular.
+Além disso, ambos Android e iOS recentemente suportam {% external_link {"text":"PWAs", "link":"https://pt.wikipedia.org/wiki/Progressive_Web_App"} %} e por isso você pode usar o próprio site da sua instância como um app no seu celular.
 
-Pra outros sistemas e uma lista mais atualizada, dá pra dar uma olhada nessa lista aqui que é mantida pelo projeto: [aplicativos](https://github.com/masto-donte-com-br/documentation/blob/master/Using-Mastodon/Apps.md){:target="_blank"}.
+Pra outros sistemas e uma lista mais atualizada, dá pra dar uma olhada nessa lista aqui que é mantida pelo projeto: {% external_link {"text":"aplicativos", "link":"https://github.com/masto-donte-com-br/documentation/blob/master/Using-Mastodon/Apps.md"} %}.
 
 Como o Mastodon é open-source, a maioria dos seus aplicativos também é. Então você pode dar uma procurada até encontrar um app que te faça se sentir mais em casa.
 
@@ -129,29 +134,33 @@ Como o Mastodon é open-source, a maioria dos seus aplicativos também é. Entã
 
 Mudar de rede social é um negócio complicado e é por isso que tem ferramentas pra tentar ajudar um pouco na transição.
 
-[Mastodon Bridge (a ponte)](http://bridge.mastodon.social){:target="_blank"}: Criado pelo próprio [Eugen Rochko](https://mastodon.social/@gargron){:target="_blank"}, a ponte serve pra descobrir amigos do Twitter no Mastodon e vice-versa. Depois de criar sua conta em um dos servidores, basta ir lá e conectar a sua conta do Twitter e do Mastodon. Aí ele vai mostrar onde você pode seguir seus amigos do Twitter.
+{% external_link {"text":"Mastodon Bridge (a ponte)", "link":"http://bridge.mastodon.social"} %}: Criado pelo próprio {% external_link {"text":"Eugen Rochko", "link":"https://mastodon.social/@gargron"} %}, a ponte serve pra descobrir amigos do Twitter no Mastodon e vice-versa. Depois de criar sua conta em um dos servidores, basta ir lá e conectar a sua conta do Twitter e do Mastodon. Aí ele vai mostrar onde você pode seguir seus amigos do Twitter.
 
-[Mastodon Twitter Crossposter (postando entre as redes)](http://crossposter.masto.donte.com.br){:target="_blank"}: Essa aí é minha. Você conecta suas contas do Twitter e do Mastodon e aí você pode decidir como você quer postar entre as redes. Do Twitter pro Mastodon, ou do Mastodon pro Twitter, que tipo de posts vão ser postados. É open-source e tem coisa pra fazer, se quiser contribuir.
+{% external_link {"text":"Mastodon Twitter Crossposter (postando entre as redes)", "link":"http://crossposter.masto.donte.com.br"} %}: Essa aí é minha. Você conecta suas contas do Twitter e do Mastodon e aí você pode decidir como você quer postar entre as redes. Do Twitter pro Mastodon, ou do Mastodon pro Twitter, que tipo de posts vão ser postados. É open-source e tem coisa pra fazer, se quiser contribuir.
 
 
 ### Segurança de dados
 
-Quando você se inscreve em um servidor do Mastodon (vamos dizer, no [masto.donte.com.br](https://masto.donte.com.br){:target="_blank"}), seus dados ficam registrados no masto.donte.com.br. O administrador do servidor pode ver suas mensagens, assim como o Gmail também pode ver suas mensagens. O Mastodon por padrão não permite que administradores vejam messagens marcadas como privadas, mas através de denúncias ou olhando o conteúdo do banco de dados, mesmo as mensagens privadas podem ser visualizadas.
+Quando você se inscreve em um servidor do Mastodon (vamos dizer, no {% external_link {"text":"masto.donte.com.br", "link":"https://masto.donte.com.br"} %}), seus dados ficam registrados no masto.donte.com.br. O administrador do servidor pode ver suas mensagens, assim como o Gmail também pode ver suas mensagens. O Mastodon por padrão não permite que administradores vejam messagens marcadas como privadas, mas através de denúncias ou olhando o conteúdo do banco de dados, mesmo as mensagens privadas podem ser visualizadas.
 
-Quando alguém de outro servidor (digamos, do [mastodon.social](https://mastodon.social){:target="_blank"}) te segue ou se você enviar uma mensagem pra um usuário que esteja por lá, os seus posts são enviados também para esse outro servidor e uma cópia desses posts vai ser guardada lá.
+Quando alguém de outro servidor (digamos, do {% external_link {"text":"mastodon.social", "link":"https://mastodon.social"} %}) te segue ou se você enviar uma mensagem pra um usuário que esteja por lá, os seus posts são enviados também para esse outro servidor e uma cópia desses posts vai ser guardada lá.
 
 Isso quer dizer que administradores de servidores em que você tenha seguidores ou pra quem você envia mensagens podem espiar as mensagens. É exatamente o mesmo caso de servidores de email, se você enviar uma mensagem pra alguém no servidor do trabalho dessa pessoa, a empresa poderia ver as mensagens.
 
+Na prática é tão (in)seguro quanto outras redes sociais.
+
 ### Mais informações
 
-A página do projeto é um bom ponto pra começar: [The Mastodon Project](http://joinmastodon.org){:target="_blank"}. Tem tradução em português por lá. Aliás, falando em tradução: tanto a página do projeto quanto a interface do Mastodon em si foram traduzidas pro português Brasileiro pela [Anna](https://anna.flourishing.stream){:target="_blank"} 🎉
+A página do projeto é um bom ponto pra começar: {% external_link {"text":"The Mastodon Project", "link":"http://joinmastodon.org"} %}. Tem tradução em português por lá. Aliás, falando em tradução: tanto a página do projeto quanto a interface do Mastodon em si foram traduzidas pro português Brasileiro pela {% external_link {"text":"Anna", "link":"https://anna.flourishing.stream"} %} 🎉
 
-Tem muito mais informação, muito mais detalhada, no [repositório de documentação do projeto](https://github.com/tootsuite/documentation){:target="_blank"}, mas a maioria das coisas ainda não está traduzida pra português ou português do Brasil. (Tá aí uma oportunidade, ó.)
+Tem muito mais informação, muito mais detalhada, no {% external_link {"text":"repositório de dosumentação do projeto", "link":"https://github.com/tootsuite/documentation"} %}, mas a maioria das coisas ainda não está traduzida pra português ou português do Brasil. (Tá aí uma oportunidade, ó.)
 
-Um pouco mais velho mas igualmente útil é o texto da Qina Liu: [What I wish I knew before joining Mastodon](https://hackernoon.com/what-i-wish-i-knew-before-joining-mastodon-7a17e7f12a2b){:target="_blank"}. Embora esteja desatualizado em alguns pontos, ainda é bem divertido e foi o que me inspirou a escrever esse aqui :)
+Um pouco mais velho mas igualmente útil é o texto da Qina Liu: {% external_link {"text":"What I wish I knew before joining Mastodon", "link":"https://hackernoon.com/what-i-wish-i-knew-before-joining-mastodon-7a17e7f12a2b"} %}. Embora esteja desatualizado em alguns pontos, ainda é bem divertido e foi o que me inspirou a escrever esse aqui :)
 
-Um outro também que explica bem vários pontos que eu tento explicar por aqui é o texto da Ginny McQueen: [Toot How-To : Intro to Mastodon](https://medium.com/@GinnyMcQueen/toot-how-to-intro-to-mastodon-e5655bfa87d2){:target="_blank"}.
+Um outro também que explica bem vários pontos que eu tento explicar por aqui é o texto da Ginny McQueen: {% external_link {"text":"Toot How-To : Intro to Mastodon", "link":"https://medium.com/@GinnyMcQueen/toot-how-to-intro-to-mastodon-e5655bfa87d2"} %}.
+
+Sabe tudo que eu falei sobre instâncias diferentes do Mastodon? O Mastodon na verdade está no Fediverso, e ele não é o único software por lá. Dá uma olhada em mais informações sobre o Fediverso {% external_link { "text": "por aqui", "link": "https://en.wikipedia.org/wiki/Fediverse" } %}.
 
 ---
 
-<a name='500-chars'></a>[1]: Vale notar que por padrão os toots têm 500 caracteres. Na prática alguns servidores permitem mais, no finado [witches.town](https://web.archive.org/web/20180417044653/https://witches.town/about){:target="_blank"}, por exemplo, o limite era de 666 caracteres. 😜
+<a name='500-chars'></a>[1]: Vale notar que por padrão os toots têm 500 caracteres. Na prática alguns servidores permitem mais, no finado {% external_link {"text":"witches.town", "link":"https://web.archive.org/web/20180417044653/https://witches.town/about"} %}, por exemplo, o limite era de 666 caracteres. 😜
