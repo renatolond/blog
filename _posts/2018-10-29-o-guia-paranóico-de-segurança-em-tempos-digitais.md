@@ -137,7 +137,7 @@ Viber promete criptografia ponto-a-ponto, mas assim como o Whatsapp, não temos 
 
 Outros aplicativos, tais como WeChat não encriptam suas conversas e devem ser evitados.
 
-O Telegram era minha primeira sugestão durante muito tempo. A interface é a melhor dentre os aplicativos de comunicação, mas o seu design faz com que por padrão as conversas não usem criptografia. Só as conversas criadas como "chat secreto" usam criptografia, o que por consequência faz com que as mensagens de conversas normais sejam todas armazenadas nos servidores do Telegram.
+O Telegram era minha primeira sugestão durante muito tempo. A interface é a melhor dentre os aplicativos de comunicação, mas o seu design faz com que por padrão as conversas não usem criptografia. Só as conversas criadas como "chat secreto" usam criptografia ponto-a-ponto, o que por consequência faz com que as mensagens de conversas normais sejam todas armazenadas nos servidores do Telegram.
 
 {% external_link {"text":"Wire", "link":"https://wire.com/products/personal-secure-messenger/"} %} e {% external_link {"text":"Signal", "link":"https://signal.org"} %} encriptam suas mensagens e tem código aberto disponível para inspeção. Entre os dois, {% external_link {"text":"Wire", "link":"https://wire.com/products/personal-secure-messenger/"} %} é o meu favorito por ter uma interface melhor mas também por dispensar a necessidade de um número de telefone. Para uma comparação mais detalhada: {% external_link {"text":"Secure Messaging Apps Comparison", "link":"https://www.securemessagingapps.com/"} %}
 
@@ -167,9 +167,9 @@ A recomendação aqui é o {% external_link {"text":"Nextcloud", "link":"https:/
 
 ### Redes Sociais
 
-Evite: usar redes sociais pra fins de organização de luta
+Evite: usar redes sociais pra fins de organização de movimentos, coletivos e afins
 
-Aqui cabe um grande parenteses: no geral, redes sociais devem ser consideradas como veículos públicos. Grupos de facebook são ótimos pra trocar histórias, mas devem ser evitados como método de organização de luta, nenhuma informação nesses grupos é realmente privada. O mesmo é válido pra outras redes sociais como Twitter, mesmo se a sua conta for fechada, isso quer dizer que os seus seguidores, _e os funcionários do Twitter_, podem ler suas mensagens.
+Aqui cabe um grande parenteses: no geral, redes sociais devem ser consideradas como veículos públicos. Grupos de facebook são ótimos pra trocar histórias, mas devem ser evitados como método de organização de movimentos, coletivos e qualquer outro tipo de luta, nenhuma informação nesses grupos é realmente privada. O mesmo é válido pra outras redes sociais como Twitter, mesmo se a sua conta for fechada, isso quer dizer que os seus seguidores, _e os funcionários do Twitter_, podem ler suas mensagens.
 
 Um outro problema: Twitter, Facebook e afins usam algoritmos desconhecidos para mostrar ou não os posts para outras pessoas. Isso faz com que eles decidam o que é relevante ou não para ser lido e pode fazer informações importantes serem escondidas por não serem detectadas como "importantes" pelos algoritmos.
 
