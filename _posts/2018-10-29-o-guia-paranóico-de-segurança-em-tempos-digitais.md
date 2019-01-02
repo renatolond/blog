@@ -104,6 +104,12 @@ Algumas notas:
 
 No computador também é possível ligar a criptografia para seus dados, os passos são bem diferentes dependendo da versão do seu sistema operacional, então é bom dar uma olhada na ajuda do seu sistema.
 
+### Celular e protestos
+
+Se alguem tem acesso físico aos seus dispositivos, fica muito mais difícil de se proteger. Um agente mal intencionado pode forçar você a revelar sua senha e ter acesso ao seu dispotivo. Evitar de levar seu celular pra manifestações pode não ser prático ou desejado (afinal, gravar qualquer coisa que esteja acontecendo pode ser uma parada valiosa depois).
+
+Além da dica da criptografia, evite usar sua digital para destravar seu celular (pelo menos, pela duração do protesto).
+
 ## O que usar como...
 
 ### Mecanismo de Busca
