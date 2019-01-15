@@ -12,6 +12,8 @@ Software developer, vim user, cyclist, powered by coffee.
 
 <i class="fa fa-map-marker" aria-hidden="true"></i> Brussels, Belgium
 
+[Wire](https://wire.com){:target="_blank"}: @renatolond
+
 ### Find me in other places
 
 <i class="fa fa-mastodon" aria-hidden="true"></i> Mastodon: [@renatolond@masto.donte.com.br](https://masto.donte.com.br/@renatolond){:target="_blank" rel="me"}
