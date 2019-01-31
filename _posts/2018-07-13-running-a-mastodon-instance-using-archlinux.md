@@ -14,7 +14,9 @@ tags:
   - Linux
 ---
 
-It's been a while now that I've been running [masto.donte.com.br](https://masto.donte.com.br){:target="_blank"} using Arch Linux and since the [official guide](https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Production-guide.md){:target="_blank"} recommends using Ubuntu 16.04, I figured that describing what I did could help someone out there. If in doubt, use the official guide instructions instead, since they're more likely to be up to date.
+It's been a while now that I've been running [masto.donte.com.br](https://masto.donte.com.br){:target="_blank"} using Arch Linux and since the [official guide](https://docs.joinmastodon.org/administration/installation/){:target="_blank"} recommends using Ubuntu 18.04, I figured that describing what I did could help someone out there. If in doubt, use the official guide instructions instead, since they're more likely to be up to date.
+
+*This was last updated on 31st of January, 2019.*
 
 <h2>Notes about some choices made in this guide</h2>
 
@@ -276,7 +278,7 @@ server {
 }
 ```
 
-⚠️ It's a good idea to take a look if something changed in relation to the [official guide](https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Production-guide.md#nginx-configuration){:target="_blank"} ⚠️
+⚠️ It's a good idea to take a look if something changed in relation to the [official guide](https://docs.joinmastodon.org/administration/installation/#setting-up-nginx){:target="_blank"} ⚠️
 
 At this point `nginx` still doesn't know about our instance (because we're including files from `/etc/nginx/sites-enabled` and we created the file in `/etc/nginx/sites-available`), however, we should be able to start `nginx` already.
 
@@ -468,7 +470,7 @@ source /home/mastodon/.rvm/scripts/rvm
 With `rvm` installed, we can then install the ruby version that Mastodon uses:
 
 ```
-rvm install 2.5.1 -C --with-jemalloc
+rvm install 2.6.1 -C --with-jemalloc
 ```
 
 Note that the `-C --with-jemalloc` parameter is there so that we use jemalloc instead the standard memory allocation library, since it's more efficient in Mastodon's case. Now, this will take some time, drink some water, stretch and come back.
@@ -519,14 +521,14 @@ git clone https://github.com/tootsuite/mastodon.git live
 
 Now, it's highly recommended to run a stable release. Why? Stable releases are bundles of finished features, if you're running an instance for day-to-day use, they are the most recommended for being the less likely to have breaking bugs.
 
-The stable release is the latest on [tootsuite's releases](https://github.com/tootsuite/mastodon/releases/){:target="_blank"} without any "rc". At the time of writing the latest one is `v2.4.5`.
+The stable release is the latest on [tootsuite's releases](https://github.com/tootsuite/mastodon/releases/){:target="_blank"} without any "rc". At the time of writing the latest one is `v2.7.1`.
 With that in mind, we will do:
 
 ```
 # Change directory to ~/live
 cd ~/live
 # Checkout to the latest stable branch
-git checkout v2.4.5
+git checkout v2.7.1
 ```
 
 And then, we will install the dependencies of the project:
@@ -641,7 +643,7 @@ Other subfolders will also be readable by other users if they know what to searc
 
 ### Mastodon systemd service files
 
-Now, you can go back to your user and we'll create service files for Mastodon. You again should compare with the [official guide](https://github.com/tootsuite/documentation/blob/master/Running-Mastodon/Production-guide.md#mastodon-systemd-service-files){:target="_blank"} to see if something changed, but have in mind that since we're using `rvm` and `nvm` in this guide the final result will be a bit different.
+Now, you can go back to your user and we'll create service files for Mastodon. You again should compare with the [official guide](https://docs.joinmastodon.org/administration/installation/#setting-up-systemd-services){:target="_blank"} to see if something changed, but have in mind that since we're using `rvm` and `nvm` in this guide the final result will be a bit different.
 
 This is what our services will look like, first the one in `/etc/systemd/system/mastodon-web.service`, responsible for Mastodon's frontend and API:
 
@@ -805,7 +807,7 @@ sudo systemctl enable certbot.timer
 
 ### Updating between Mastodon versions
 
-Okay, you set it all up, everything is running and then Mastodon `v2.5.0` comes out. What do you do?
+Okay, you set it all up, everything is running and then Mastodon `v2.8.0` comes out. What do you do?
 
 Do not despair, dear reader, all is well.
 
@@ -821,22 +823,22 @@ Okay, first things first, let's go into the live directory and get the new versi
 ```
 cd ~/live
 git fetch origin --tags
-git checkout v2.5.0
+git checkout v2.8.0
 cd . # This is to force rvm to check if we're in the right ruby version
 ```
 
-Now, suppose the ruby version changed, since the last time you were here and instead of `2.5.1` is now `2.5.2`. After you do `cd .`, rvm will complain:
+Now, suppose the ruby version changed, since the last time you were here and instead of `2.6.1` is now `2.6.2`. After you do `cd .`, rvm will complain:
 
 ```
 $ cd .
-Required ruby-2.5.2 is not installed.
-To install do: 'rvm install "ruby-2.5.2"'
+Required ruby-2.6.2 is not installed.
+To install do: 'rvm install "ruby-2.6.2"'
 ```
 
 In this case, we will need to use rvm to install the new version. The command is the same as last time:
 
 ```
-rvm install 2.5.2 -C --with-jemalloc
+rvm install 2.6.2 -C --with-jemalloc
 ```
 
 Everything will take some time and at the end you will be ready to follow through. Notice that this won't happen very often. Also, after you make sure everything is running as expected, you can remove the old ruby version with `rvm remove <version>`. Wait for you to be sure that the new version is running, though!
@@ -894,7 +896,7 @@ bundle pristine
 
 This will take a little while but will recompile needed gems. When in doubt, do that after a system upgrade.
 
-I had issues in the past with gems that Mastodon uses which have native extensions and are being installed straight from git, namely `posix-spawn` and `http_parser.rb`. They were not reinstalled with `bundle pristine` and I had to manually rebuild them. To do that, find where they are installed doing:
+I had issues in the past with gems that Mastodon uses which have native extensions and are being installed straight from git, namely `posix-spawn` and `http_parser.rb`. They were not reinstalled with `bundle pristine` and I had to manually rebuild them. This seems to fixed in the most recent rvm, but in case you need to do that, find where they are installed doing:
 
 ```
 bundle show posix-spawn

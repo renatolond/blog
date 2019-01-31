@@ -24,6 +24,8 @@ There is also an {% external_link {"text": "official guide to setting up your en
 
 This guide is focused on Mastodon, but most of the setup done here will work for other ruby on rails projects you might want to contribute to.
 
+*This was last updated on 31st of January, 2019.*
+
 ---
 
 <h3>Note on the choices made in this guide</h3>
@@ -64,7 +66,7 @@ From the official guide:
 
 When trying to fix a bug or implement a new feature, it is a good idea to branch off the `master` branch with a new branch and then submit your pull request using that branch.
 
-A good way to see that your environment is working as it should is to check out the latest stable release (for instance, at the time of writing the latest stable release is `v2.4.3`) and then run tests as suggested in the [tests](#tests) session. They should all pass because the tests in stable releases should always be working.
+A good way to see that your environment is working as it should is to check out the latest stable release (for instance, at the time of writing the latest stable release is `v2.7.1`) and then run tests as suggested in the [tests](#tests) session. They should all pass because the tests in stable releases should always be working.
 
 ---
 
@@ -156,7 +158,7 @@ source $HOME/.rvm/scripts/rvm
 With `rvm` installed, we can then install the ruby version that Mastodon uses:
 
 ```
-rvm install 2.5.1
+rvm install 2.6.1
 ```
 
 Now, this will take some time, drink some water, stretch and come back.
@@ -320,18 +322,18 @@ ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this is
 
 This will appear on your console, but also on your browser.
 
-If the ruby being used in the project is updated, you will also see some complaints from rvm (in this example, with a hypothetical ruby 2.5.2):
+If the ruby being used in the project is updated, you will also see some complaints from rvm (in this example, with a hypothetical ruby 2.6.2):
 
 ```
 $ cd .
-Required ruby-2.5.2 is not installed.
-To install do: 'rvm install "ruby-2.5.2"'
+Required ruby-2.6.2 is not installed.
+To install do: 'rvm install "ruby-2.6.2"'
 ```
 
 In that case we need to do the same as we did to install it the first time, that is:
 
 ```
-rvm install 2.5.2
+rvm install 2.6.2
 ```
 
 And since rvm manages gems by ruby version, you'll need to install the dependencies again using `bundle install`.
