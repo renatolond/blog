@@ -758,7 +758,7 @@ Now if your instance goes down or your IPv6 stops working, you should get an ema
 Mastodon downloads media from other instances and caches them locally. If you don't clean this from time to time, this will only keep growing. Using mastodon user, you can add a cron job that cleans it up daily using `crontab -e` and adding:
 
 ```
-0 2 * * * /bin/bash -lc "cd live; RAILS_ENV=production bundle exec rake mastodon:media:remove_remote" 2>&1 /home/mastodon/remove_media.output
+0 2 * * * /bin/bash -lc "cd live; RAILS_ENV=production bundle exec bin/tootctl media remove" 2>&1 /home/mastodon/remove_media.output
 ```
 
 If you don't have any cron installed in your server, you need to take a look in [Arch Linux's wiki page about cron](https://wiki.archlinux.org/index.php/cron){:target="_blank"}.
