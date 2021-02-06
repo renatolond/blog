@@ -4,6 +4,8 @@ title: O guia paranóico de segurança em tempos digitais
 lang: pt
 ---
 
+_(atualizado pela última vez em 6 de fevereiro de 2021)_
+
 Com a escalada do fascismo e o fato de que nossas vidas estão cada vez mais presentes online, é preciso tomar precauções para que nossas identidades digitais não caiam nas mãos erradas. Primeiro porque isso pode revelar informações valiosas nossas e de pessoas queridas à nossa volta. Segundo porque isso pode permitir que atacantes passem informações falsas usando nossas identidades.
 
 Esse post está dividido em duas partes: uma parte de dicas mais gerais e uma parte de recomendações de apps pra substituir.
@@ -18,7 +20,7 @@ Esse guia é mais um dentre outros guias que podem ser encontrados na internet. 
 
 Se quiser fazer uma correção nesse post ou discutir algum ponto, só entrar em contato por um dos meios disponíveis ali no link [sobre](/about), ou ainda, abrir uma discussão direto no [github](https://github.com/renatolond/blog/issues)
 
-Esse post ainda está sofrendo mudanças, mas eu resolvi colocar ele online meio cru mesmo, pra ajudar quem já está se mobilizando por aí.
+Tenha em mente: esse post não é revisado com frequência, antes de usar cegamente um dos apps daqui, dê uma pesquisada rápida para ver o status atual do aplicativo. Muita coisa muda o tempo todo :)
 
 ---
 
@@ -126,9 +128,9 @@ O Bing não está muito atrás, e embora tenha menos dados em sua posse, faz par
 
 ### Aplicativos de mensagem instantânea
 
-<figure><img alt="Captura de tela de um chat no Wire" src="/assets/2018-10-29_wire.png" height="600" /><figcaption>Wire</figcaption></figure>
+<figure><img alt="Captura de tela de um chat no Signal" src="/assets/2018-10-29_signal.png" height="600" /><figcaption>Signal</figcaption></figure>
 
-**Use**: {% external_link {"text":"Wire", "link":"https://wire.com/products/personal-secure-messenger/"} %}, {% external_link {"text":"Signal", "link":"https://signal.org"} %}  
+**Use**: {% external_link {"text":"Threema", "link":"https://threema.ch/"} %}, {% external_link {"text":"Signal", "link":"https://signal.org"} %}  
 Evite: Whatsapp, Facebook Messenger, Google Hangouts, Google Chats, Telegram, Viber, WeChat, DMs no Twitter
 
 Queremos evitar duas coisas no caso de mensagens instantâneas: armazenamento das mensagens nos servidores do aplicativo, porque podem ser recuperadas através de falhas de segurança ou de funcionários mal intencionados; criptografia ponto-a-ponto, para evitar que alguém possa ler as mensagens sem permissão.
@@ -145,7 +147,9 @@ Outros aplicativos, tais como WeChat não encriptam suas conversas e devem ser e
 
 O Telegram era minha primeira sugestão durante muito tempo. A interface é a melhor dentre os aplicativos de comunicação, mas o seu design faz com que por padrão as conversas não usem criptografia. Só as conversas criadas como "chat secreto" usam criptografia ponto-a-ponto, o que por consequência faz com que as mensagens de conversas normais sejam todas armazenadas nos servidores do Telegram.
 
-{% external_link {"text":"Wire", "link":"https://wire.com/products/personal-secure-messenger/"} %} e {% external_link {"text":"Signal", "link":"https://signal.org"} %} encriptam suas mensagens e tem código aberto disponível para inspeção. Entre os dois, {% external_link {"text":"Wire", "link":"https://wire.com/products/personal-secure-messenger/"} %} é o meu favorito por ter uma interface melhor mas também por dispensar a necessidade de um número de telefone. Para uma comparação mais detalhada: {% external_link {"text":"Secure Messaging Apps Comparison", "link":"https://www.securemessagingapps.com/"} %}
+{% external_link {"text":"Threema", "link":"https://threema.ch/"} %} e {% external_link {"text":"Signal", "link":"https://signal.org"} %} encriptam suas mensagens e tem código aberto disponível para inspeção.
+
+Numa versão anterior desse post eu recomendava o Wire, que também é encriptado ponta-a-ponta. Porém, em 2019 o Wire mudou de mãos e agora pertence a uma companhia estadunidense. Essa mudança foi {% external_link {"text": "bastante criticada", "link": "https://www.thinkprivacy.ch/cutting-the-wire/"} %} pela falta de transparência e por vir junto com {% external_link {"text": "mudanças suspeitas nos termos de uso", "link": "https://en.wikipedia.org/wiki/Wire_(software)#Privacy_policy_changes"} %}. Por isso, eu recomendo evitar o Wire se possível.
 
 ### Email
 
