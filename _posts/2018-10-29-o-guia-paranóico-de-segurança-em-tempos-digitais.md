@@ -21,6 +21,7 @@ Esse guia é mais um dentre outros guias que podem ser encontrados na internet. 
 Se quiser fazer uma correção nesse post ou discutir algum ponto, só entrar em contato por um dos meios disponíveis ali no link [sobre](/about), ou ainda, abrir uma discussão direto no [github](https://github.com/renatolond/blog/issues)
 
 Tenha em mente: esse post não é revisado com frequência, antes de usar cegamente um dos apps daqui, dê uma pesquisada rápida para ver o status atual do aplicativo. Muita coisa muda o tempo todo :)
+Uma outra boa fonte, em inglês, de recomendações que está bem alinhada com as recomendações nesse post é o {% external_link {"text": "Think Privacy", "link": "https://www.thinkprivacy.ch/"} %}.
 
 ---
 
